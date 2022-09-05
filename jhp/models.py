@@ -25,7 +25,7 @@ class Application(models.Model):
     def __str__(self):
         return self.title
     
-class Interview(models.model):
+class Interview(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='interviews'
     )
@@ -36,7 +36,7 @@ class Interview(models.model):
     def __str__(self):
         return self.title
     
-class Event(models.model):
+class Event(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='events'
     )
@@ -47,7 +47,7 @@ class Event(models.model):
     def __str__(self):
         return self.title
     
-class Study(models.model):
+class Study(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='studies'
     )
@@ -58,7 +58,7 @@ class Study(models.model):
     def __str__(self):
         return self.title
     
-class History(models.model):
+class History(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='historyies'
     )
