@@ -63,7 +63,7 @@ class History(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='histories'
     )
-    strat_date = models.DateField()
+    start_date = models.DateField()
     end_date = models.DateField()
     applications = models.JSONField()
     applications_number = models.IntegerField()
