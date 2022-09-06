@@ -8,8 +8,8 @@ class User(models.Model):
     email = models.EmailField(max_length=254)
     password = models.CharField(max_length=50)
     goal = models.CharField(max_length=50)
-    start_date = models.DateTimeField(auto_now_add=True)
-    end_date = models.DateTimeField(auto_now=True)
+    start_date = models.DateField(auto_now=False)
+    end_date = models.DateField(auto_now=False)
     
     def __str__(self):
         return self.email
@@ -19,7 +19,8 @@ class Application(models.Model):
         User, on_delete=models.CASCADE, related_name='applications'
     )
     title = models.CharField(max_length=100, default='No Title')
-    date = models.DateTimeField(auto_now=False)
+    date = models.DateField(auto_now=False)
+    counter = models.PositiveIntegerField(default=1)
     comment = models.CharField(max_length=200, default='No Comment')
     
     def __str__(self):
@@ -60,7 +61,7 @@ class Study(models.Model):
     
 class History(models.Model):
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='historyies'
+        User, on_delete=models.CASCADE, related_name='histories'
     )
     strat_date = models.DateField()
     end_date = models.DateField()
