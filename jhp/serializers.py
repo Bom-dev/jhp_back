@@ -67,4 +67,4 @@ class HistorySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         depth = 1
         model = History
-        fields = ('id', 'title', 'date', 'comment', 'user', 'user_id')
+        fields = ('id', 'start_date', 'end_date', 'applications', 'applications_number', 'interviews', 'events', 'studies', 'user_id')
