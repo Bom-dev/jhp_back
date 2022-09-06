@@ -68,8 +68,9 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://domain.com",
-    "https://localhost:3000"
-    "https://127.0.0.1:3000"
+    "https://localhost:3000",
+    "https://127.0.0.1:3000",
+    "https://job-hunters-point.herokuapp.com/",
 ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
