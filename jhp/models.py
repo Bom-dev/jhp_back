@@ -72,4 +72,4 @@ class History(models.Model):
     studies = models.JSONField()
     
     def __str__(self):
-        return self.strat_date
+        return str(self.strat_date)
