@@ -53,7 +53,7 @@ class Study(models.Model):
         User, on_delete=models.CASCADE, related_name='studies'
     )
     title = models.CharField(max_length=100, default='No Title')
-    date = models.DateTimeField(auto_now=False)
+    date = models.DateField(auto_now=False)
     comment = models.CharField(max_length=200, default='No Comment')
     
     def __str__(self):
