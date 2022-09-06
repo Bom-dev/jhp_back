@@ -1,1 +1,1 @@
-web: gunicorn dir_name.wsgi --log-file -
+web: gunicorn jhp_back.wsgi --log-file -
