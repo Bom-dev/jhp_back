@@ -19,7 +19,7 @@ class ApplicationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         depth = 1
         model = Application
-        fields = ('id', 'title', 'date', 'comment', 'user', 'user_id')
+        fields = ('id', 'title', 'date', 'comment', 'counter', 'user', 'user_id')
        
         
 class InterviewSerializer(serializers.HyperlinkedModelSerializer):
